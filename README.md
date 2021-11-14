@@ -1,0 +1,1 @@
+Weather App displaying current weather, temperature, and upcoming weekday forecast. 
