@@ -27,7 +27,7 @@ function cityNameOnly(city){
 }
 
 async function getCoordinates(city){
-  let url = `https:api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&cnt=7&appid=0ad552a59c7b844bcd402e711e49d1d6`;
+  let url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&cnt=7&appid=0ad552a59c7b844bcd402e711e49d1d6`;
   const response = await fetch (url,{mode:"cors"});
   const weatherData = await response.json();
   const lat = weatherData.city.coord.lat;
