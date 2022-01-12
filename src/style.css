@@ -1,0 +1,118 @@
+body{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: .1;
+  min-height: 100vh;
+  background-position: center;
+  color:white;
+  text-shadow: white 0px 0px 10px;
+  font-family: 'Courier New', Courier, monospace;
+  
+}
+h2{
+  font-size: 32px;
+  text-align: center;
+}
+#main-page{
+  display:flex;
+  flex-direction: column;
+  align-items: space-evenly;
+}
+#main{
+  margin-top:4rem;
+  display:flex;
+  flex-direction: column;
+}
+.city-name{
+  font-size:36px;
+  margin-top: 4rem;
+  margin-bottom:2px;
+  text-align: center;
+}
+.type-weather{
+  font-size:24px;
+  text-align: center;
+  margin-bottom:2px;
+}
+.weather-now{
+  font-size:36px;
+  text-align:center;
+}
+.today-hi-low{
+  text-align: center;
+  font-size:18px;
+}
+.weather-div{
+  min-width: 1px;
+  border: 1px solid transparent;
+  min-height: 5rem;
+  max-height:5rem;
+  text-align: left;
+  white-space: nowrap;
+}
+.input-section{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top:2rem;
+}
+.city-input{
+  width:10rem;
+  height:18px;
+  font-size:16px;
+  color:lightgrey;
+  background-color: transparent;
+  border-color: black;
+  border-top:transparent;
+  border-right:transparent;
+  border-left:transparent;
+  outline-style:none;
+}
+.button-input{
+  width:8rem;
+  height:2rem;
+  border-radius:5px;
+  box-shadow: border-box;
+  margin-top:7px;
+  background-color: hsl(200, 100%, 50%);
+  color:white;
+  font-size: 20px;
+  border:none;
+}
+.button-input:hover{
+  cursor:pointer;
+  background-color: hsl(200, 100%, 35%);
+}
+.day{
+  margin-top: -1%;
+  text-align: left;
+  display: inline-block;
+  font-size: 24px;
+}
+.max-temp{
+  margin-top:-1%;
+  font-size: 24px;
+  text-align: left;
+  right:30%;
+  position:absolute;
+  display: inline-block;
+}
+.min-temp{
+  margin-top: -1%;
+  margin-block-end: 10rem;
+  font-size: 24px;
+  display: inline-block;
+  right:5%;
+  position:absolute;
+  color:lightgray;
+}
+
+.week-weather{
+  margin-top: -2%;
+  font-size: 24px;
+  display: inline-block;
+  right:55%;
+  position:absolute;
+  color:lightgray;
+}
