@@ -31,7 +31,7 @@ async function getCoordinates(city){
   const lat = weatherData.city.coord.lat;
   const lon = weatherData.city.coord.lon;
   const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&units=imperial&appid=0ad552a59c7b844bcd402e711e49d1d6`;
-  getWeather(url);
+  return getWeather(url);
 }
 
 async function getWeather(url){
