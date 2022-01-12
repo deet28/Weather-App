@@ -81,7 +81,7 @@ function displayWeekType(data){
     weekWeather[i].innerHTML = '';
     let weatherImage = document.createElement('img');
     let weatherIcon = data.daily[i].weather[0].icon;
-    weatherImage.src = `http://openweathermap.org/img/w/${weatherIcon}.png`;
+    weatherImage.src = `https://openweathermap.org/img/w/${weatherIcon}.png`;
     weekWeather[i].appendChild(weatherImage);
   }
 }
