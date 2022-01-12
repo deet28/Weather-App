@@ -7,7 +7,6 @@ async function getBackground(){
   const picData = await response.json();
   const url = picData.data[2].images.original.url
   document.body.background = url;
-  console.log(picData)
 }
 
 getBackground();

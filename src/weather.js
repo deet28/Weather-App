@@ -46,6 +46,7 @@ async function getWeather(weatherURL){
   displayType(weatherData);
   displayHiLow(weatherData);
   displayWeekType(weatherData);
+  console.log(weather)
 }
   
 function enterCity(e){

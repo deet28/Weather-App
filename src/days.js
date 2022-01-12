@@ -11,7 +11,6 @@
   
   let date = new Date();
   let today = date.getDay();
-  console.log(today);
   weekDays[0].textContent = days[today];
   
   function testWeek(input){
