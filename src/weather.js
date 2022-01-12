@@ -11,6 +11,7 @@ const minTemp = document.querySelectorAll('.min-temp');
 const goButton = document.querySelector('.button-input');
 const cityInput = document.querySelector('.city-input');
 
+
 function cityNameOnly(city){
   const regex = new RegExp('^[a-zA-Z ]+$');
   if (regex.test(city) === false){
@@ -31,9 +32,10 @@ async function getCoordinates(city){
   const lat = weatherData.city.coord.lat;
   const lon = weatherData.city.coord.lon;
   const weatherSource = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&units=imperial&appid=0ad552a59c7b844bcd402e711e49d1d6`;
-  console.log(weatherSource);
-  return getWeather(weatherSource);
+  return getWeather(weatherSource.split('deet28.github.io/Weather-App/dist/').join(''));
+
 }
+//(thing.split('deet28.github.io/Weather-App/dist/').join(''))
 
 async function getWeather(inputSource){
   const weather = await fetch(inputSource);
@@ -94,7 +96,6 @@ async function pageLoad(){
   displayHiLow(londonData);
   displayType(londonData);
   displayWeekType(londonData);
-  console.log(response);
 }
 
 goButton.addEventListener('click',enterCity);
