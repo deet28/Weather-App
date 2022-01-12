@@ -27,15 +27,17 @@ function cityNameOnly(city){
 }
 
 async function getCoordinates(city){
-  const response = await fetch (`https:api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&cnt=7&appid=0ad552a59c7b844bcd402e711e49d1d6`);
+  let url = `https:api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&cnt=7&appid=0ad552a59c7b844bcd402e711e49d1d6`;
+  let url2 = url.split('deet28.github.io/Weather-App/dist/').join('');
+  const response = await fetch(url2);
+  //const response = await fetch (`https:api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&cnt=7&appid=0ad552a59c7b844bcd402e711e49d1d6`);
   const weatherData = await response.json();
   const lat = weatherData.city.coord.lat;
   const lon = weatherData.city.coord.lon;
   const weatherSource = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&units=imperial&appid=0ad552a59c7b844bcd402e711e49d1d6`;
-  return getWeather(weatherSource.split('deet28.github.io/Weather-App/dist/').join(''));
+  return getWeather(weatherSource);
 
 }
-//(thing.split('deet28.github.io/Weather-App/dist/').join(''))
 
 async function getWeather(inputSource){
   const weather = await fetch(inputSource);
@@ -48,7 +50,6 @@ async function getWeather(inputSource){
   displayType(weatherData);
   displayHiLow(weatherData);
   displayWeekType(weatherData);
-  console.log(weather)
 }
   
 function enterCity(e){
