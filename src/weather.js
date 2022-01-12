@@ -103,6 +103,7 @@ cityInput.addEventListener('keypress',function(e) {
     enterCity(cityInput.value);
   }
 });
+
 pageLoad();
 
 
