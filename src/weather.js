@@ -30,13 +30,13 @@ async function getCoordinates(city){
   const weatherData = await response.json();
   const lat = weatherData.city.coord.lat;
   const lon = weatherData.city.coord.lon;
-  const weatherURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&units=imperial&appid=0ad552a59c7b844bcd402e711e49d1d6`;
-  console.log(weatherURL);
-  return getWeather(weatherURL);
+  const weatherSource = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&units=imperial&appid=0ad552a59c7b844bcd402e711e49d1d6`;
+  console.log(weatherSource);
+  return getWeather(weatherSource);
 }
 
-async function getWeather(weatherURL){
-  const weather = await fetch(weatherURL);
+async function getWeather(inputSource){
+  const weather = await fetch(inputSource);
   const weatherData = await weather.json();
   let city = cityInput.value.toUpperCase()
   cityName.textContent = '';
