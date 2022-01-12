@@ -1,1 +1,1 @@
-Weather App displaying current weather, temperature, and upcoming weekday forecast. 
+Weather App displaying current weather, temperature, and upcoming weekday forecast. Made with JavaScript
