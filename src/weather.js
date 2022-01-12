@@ -28,13 +28,12 @@ function cityNameOnly(city){
 
 async function getCoordinates(city){
   let url = `https:api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&cnt=7&appid=0ad552a59c7b844bcd402e711e49d1d6`;
-  const response = await fetch (`https:api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&cnt=7&appid=0ad552a59c7b844bcd402e711e49d1d6`);
+  const response = await fetch (url,{mode:"cors"});
   const weatherData = await response.json();
   const lat = weatherData.city.coord.lat;
   const lon = weatherData.city.coord.lon;
   const weatherSource = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&units=imperial&appid=0ad552a59c7b844bcd402e711e49d1d6`;
   return getWeather(weatherSource);
-
 }
 
 async function getWeather(inputSource){
@@ -89,7 +88,7 @@ function displayWeekType(data){
 
 
 async function pageLoad(){
-  const response = await fetch('https://api.openweathermap.org/data/2.5/onecall?lat=51.5085&lon=-0.1257&exclude=hourly,minutely&units=imperial&appid=0ad552a59c7b844bcd402e711e49d1d6');
+  const response = await fetch('https://api.openweathermap.org/data/2.5/onecall?lat=51.5085&lon=-0.1257&exclude=hourly,minutely&units=imperial&appid=0ad552a59c7b844bcd402e711e49d1d6',{mode:"cors"});
   const londonData = await response.json();
   displayTemp(londonData)
   displayHiLow(londonData);
